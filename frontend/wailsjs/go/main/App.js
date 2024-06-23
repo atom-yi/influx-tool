@@ -5,3 +5,7 @@
 export function Greet(arg1) {
   return window['go']['main']['App']['Greet'](arg1);
 }
+
+export function WriteToInflux(arg1, arg2, arg3) {
+  return window['go']['main']['App']['WriteToInflux'](arg1, arg2, arg3);
+}
