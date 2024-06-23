@@ -1,19 +1,17 @@
 # README
 
-## About
+## InfluxDb 可视化工具
 
-This is the official Wails React template.
+使用截图：
 
-You can configure the project by editing `wails.json`. More information about the project settings can be found
-here: https://wails.io/docs/reference/project-config
+1、数据库连接管理
 
-## Live Development
+![img.png](images/db_info_screenshot.png)
 
-To run in live development mode, run `wails dev` in the project directory. This will run a Vite development
-server that will provide very fast hot reload of your frontend changes. If you want to develop in a browser
-and have access to your Go methods, there is also a dev server that runs on http://localhost:34115. Connect
-to this in your browser, and you can call your Go code from devtools.
+2、数据查询
 
-## Building
+![img.png](images/query_screenshot.png)
 
-To build a redistributable, production mode package, use `wails build`.
+3、数据录入
+![img.png](images/data_save_screenshot.png)
+
