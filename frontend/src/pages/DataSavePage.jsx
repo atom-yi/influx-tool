@@ -16,12 +16,10 @@ export default function DataSavePage({dbInfo}) {
             return;
         }
 
+        const contentBlob = new Blob([insertContent], {type: "text/plain"});
         fetch(getWriteUrl(dbInfo), {
             method: "POST",
-            body: insertContent,
-            headers: {
-                "Content-Type": "raw"
-            }
+            body: contentBlob,
         })
             .then(res => res.json())
             .then(res => {
@@ -53,7 +51,7 @@ export default function DataSavePage({dbInfo}) {
                 onChange={e => setInsertContent(e.target.value)}
                 rows={4}
                 value={insertContent}
-                placeHolder="输入插入的数据，格式：measurement_name,tag1=tag_value field1=field_value timestamp"/>
+                placeholder="输入插入的数据，格式：measurement_name,tag1=tag_value field1=field_value timestamp"/>
             <Space className="mt-2">
                 <Button size="small" type="primary" onClick={() => insertToDb()}>插入数据</Button>
             </Space>
