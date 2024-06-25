@@ -4,7 +4,7 @@ import {useState} from "react";
 import dayjs from "dayjs";
 
 const UNIT_MAP = {
-    "ns": {fromMs: ms => ms * 1000000000, toMs: ns => ns / 1000000000},
+    "ns": {fromMs: ms => ms * 1000000, toMs: ns => ns / 1000000},
     "us": {fromMs: ms => ms * 1000, toMs: us => us / 1000},
     "ms": {fromMs: ms => ms, toMs: ms => ms},
     "s":  {fromMs: ms => ms / 1000, toMs: s => s * 1000},
